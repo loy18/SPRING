@@ -1,0 +1,21 @@
+package kr.or.ddit.service.impl;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import kr.or.ddit.mapper.BookMapper;
+import kr.or.ddit.service.BookService;
+import kr.or.ddit.vo.BookVO;
+
+@Service
+public class ProdServiceImpl {
+	@Autowired
+	ProdMapper prodMapper;
+	//도서 목록
+		public List<Map<String,Object>> amtSale(){
+			
+		}
+}

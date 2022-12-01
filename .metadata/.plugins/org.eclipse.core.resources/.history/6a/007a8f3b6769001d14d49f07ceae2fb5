@@ -1,0 +1,9 @@
+{
+	"cols":[
+			{"id":"","label":"상품명","pattern":"","type":"string"},
+			{"id":"","label":"금액","pattern":"","type":"number"}
+	],
+	"rows":[
+			{}"c":[{"v":"귤"},["v":35000}]},
+	]
+}

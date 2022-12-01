@@ -1,0 +1,16 @@
+package kr.or.ddit.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import kr.or.ddit.mapper.GalleryMapper;
+import kr.or.ddit.vo.GalleryVO;
+
+public class GalleryServiceImpl {
+	@Autowired
+	GalleryMapper galleryMapper;
+	public List<GalleryVO> list (){
+		return this.galleryMapper.list();
+	}
+}

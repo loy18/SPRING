@@ -1,0 +1,16 @@
+package kr.or.ddit.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import kr.or.ddit.mapper.GalleryMapper;
+import kr.or.ddit.vo.BookVO;
+
+public class AttachServiceImpl implements AttachService {
+	@Autowired
+	GalleryMapper galleryMapper;
+	
+	//한 권의 책에 대한 여러 개의 이미지 목록
+	public BookVO list (BookVO bookVO) {
+		return this.galleryMapper.list(bookVO);
+	}
+}

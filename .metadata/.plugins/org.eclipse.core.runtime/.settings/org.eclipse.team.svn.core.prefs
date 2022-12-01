@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+externalMigrateFromAuthorizationDatabase/isMigrated=true
+migrateFromAuthorizationDatabase/isMigrated=true
+repositories/7084ab8d3369001d15ffdd93909640b2=7084ab8d3369001d15ffdd93909640b2;https\://192.168.142.3/svn/spring/springProduct;https\://192.168.142.3/svn/spring/springProduct;branches;tags;trunk;true;2e86e307-f82a-f343-bba3-7f43f79aa1f3;https\://192.168.142.3/svn/spring;;false;;;0

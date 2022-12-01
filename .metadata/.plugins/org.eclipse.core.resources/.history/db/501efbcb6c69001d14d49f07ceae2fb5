@@ -1,0 +1,14 @@
+{
+	"cols":[
+			{"id":"","label":"상품명","pattern":"","type":"string"},
+			{"id":"","label":"금액","pattern":"","type":"number"}
+	],
+	"rows":[
+			{"c":[{"v":"Mushrooms"},{"v":35000}]},
+			{"c":[{"v":"Onions"},{"v":88000}]},
+			{"c":[{"v":"Olives"},{"v":16500}]},
+			{"c":[{"v":"Zucchini"},{"v":20000}]},
+			{"c":[{"v":"Pepperoni"},{"v":30000}]},
+			{"c":[{"v":"포도"},{"v":15000}]}
+	]
+}

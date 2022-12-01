@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="kr.or.ddit.mapper.GalleryMapper">
+  
+  <resultMap type="bookVO" id="bookMap">
+  <id property="bookId" column="BOOK_ID" />
+  <result property="title" column="TITLE" />
+  <result property="category" column="CATEGORY" />
+  <result property="price" column="PRICE" />
+  <result property="insertDate" column="INSERT_DATE" />
+  <result property="content" column="CONTENT" 
+  jdbcType="CLOB" javaType="java.lang.String"/>
+  <collection property="attachVOList" resultMap="attachMap"></collection>
+  </resultMap>
+  <!-- attachVOList의 resultMap 1 : N attachVO의 id -->
+  <resultMap type="attachVO" id="attachMap">
+	<result property="userNo" column="USER_NO" />
+	<result property="seq" column="SEQ" />
+	<result property="filename" column="FILENAME" />
+	<result property="filesize" column="FILESIZE" />
+	<result property="regdate" column="REGDATE" />
+  </resultMap>
+  
+  <!-- 이미지 목록 -->
+  <select id="list" parameterType="bookVO" resultMap="bookMap">
+  		SELECT 	A.BOOK_ID, A.TITLE, A.CATEGORY, A.PRICE, A.INSERT_DATE, A.CONTENT
+       						 ,B.USER_NO, B.SEQ, B.FILENAME, B.FILESIZE, B.REGDATE
+		FROM 		BOOK A INNER JOIN ATTACH B ON(A.BOOK_ID = B.USER_NO)
+		WHERE 	A.BOOK_ID = #{bookId}
+  </select>
+  
+  <select id="bookList" resultType="bookVO">
+			    SELECT BOOK_ID, TITLE, CATEGORY, PRICE, INSERT_DATE, CONTENT
+				FROM BOOK
+				ORDER BY TITLE ASC
+  </select>
+  </mapper>
